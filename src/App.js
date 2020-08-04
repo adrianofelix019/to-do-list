@@ -1,9 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
 
 function App() {
-  return <h1>Hello World!</h1>
+  const [todos, setTodos] = useState([
+    { text: 'Aprender React' },
+    { text: 'Ir a academia' },
+    { text: 'Construir uma aplicação legal' }
+  ])
+
+  const Todo = ({ todo }) => <div className="todo">{todo.text}</div>
+
+  return (
+    <div className="app">
+      <div className="todo-list">
+        {
+          todos.map((todo, index) => (
+            <Todo
+              key={index}
+              index={index}
+              todo={todo}
+            />
+          ))
+        }
+      </div>
+    </div>
+  )
 }
 
-export default App;
+export default App
