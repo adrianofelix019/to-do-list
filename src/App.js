@@ -3,7 +3,7 @@ import './App.css'
 import Todo from './components/Todo'
 import TodoForm from './components/TodoForm'
 
-function App() {
+export default () => {
   const [todos, setTodos] = useState([
     {
       text: 'Aprender React',
@@ -55,5 +55,3 @@ function App() {
     </div>
   )
 }
-
-export default App
