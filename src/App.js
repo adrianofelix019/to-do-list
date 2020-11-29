@@ -14,7 +14,7 @@ export default () => {
       isCompleted: false
     },
     {
-      text: 'Construir uma aplicação legal',
+      text: 'Construir uma aplicação',
       isCompleted: false
     }
   ])
